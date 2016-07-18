@@ -29,5 +29,4 @@ The server should serve the index page of your application at the root url. The 
   "Sahasha Reese",
   "Tracy Vincent",
   "Trent Johnson"
-];
-```
+];```
