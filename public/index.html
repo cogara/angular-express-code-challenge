@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="angularCodeChallenge">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Jomhuria" rel="stylesheet">
+    <script src="angular.min.js" charset="utf-8"></script>
+    <script src="client.js" charset="utf-8"></script>
+    <title>Angular-Express Code Challenge</title>
+  </head>
+  <body ng-controller="MainController as main">
+    <div class="container">
+      <div class="header">
+        <h1>Angular-Express Code Challenge</h1>
+        <h4>Connor O'Gara</h4>
+      </div>
+      <div class="btn-display"
+            ng-click="main.getNames()"
+            ng-model="button">
+        {{main.toggle}} Students
+      </div>
+      <div class="student-list"
+            ng-show="main.show">
+        <h2>Xi Students:</h2>
+        <ul>
+          <li class="student"
+              style="list-style-type: decimal-leading-zero"
+              ng-repeat="student in main.students">
+            {{student}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
